@@ -4,6 +4,7 @@ import AnimalCard from "../components/AnimalCard";
 
 export default function Worldcup() {
   const [shuffleAnimal, setShuffleAnimal] = useState();
+  const [choice, setChoice] = useState(0);
 
   useEffect(() => {
     let shuffleAnimalData = animalData.sort(() => {
@@ -21,9 +22,9 @@ export default function Worldcup() {
       <AnimalCard animal={shuffleAnimal[1]} /> 이 코드로 했을 시는 useState 초기 값에 빈배열 추가 */}
       {shuffleAnimal && (
         <>
-          <AnimalCard animal={shuffleAnimal[0]} />
+          <AnimalCard animal={shuffleAnimal[choice]} choice={choice} />
           <div className="text-2xl mx-8 font-bold">VS</div>
-          <AnimalCard animal={shuffleAnimal[1]} />
+          <AnimalCard animal={shuffleAnimal[choice+1]} choice={choice + 1}/>
         </>
       )}
     </div>
