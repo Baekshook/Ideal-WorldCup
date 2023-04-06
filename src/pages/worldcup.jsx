@@ -15,9 +15,17 @@ export default function Worldcup() {
 
   return (
     <div className="bg-pink-200 min-h-screen flex justify-center items-center">
-      {/* <AnimalCard animal={shuffleAnimal[7]} /> * 이 코드로 했을 시는 useState 초기 값에 빈배열 추가/ } 
       {/* {shuffleAnimal ? <AnimalCard animal={shuffleAnimal[0]} /> : "값이없음"} */}
-      {shuffleAnimal && <AnimalCard animal={shuffleAnimal[0]} />}
+      {/* <AnimalCard animal={shuffleAnimal[0]} />
+      <div className="text-2xl mx-8 font-bold">VS</div>
+      <AnimalCard animal={shuffleAnimal[1]} /> 이 코드로 했을 시는 useState 초기 값에 빈배열 추가 */}
+      {shuffleAnimal && (
+        <>
+          <AnimalCard animal={shuffleAnimal[0]} />
+          <div className="text-2xl mx-8 font-bold">VS</div>
+          <AnimalCard animal={shuffleAnimal[1]} />
+        </>
+      )}
     </div>
   );
 }
