@@ -40,7 +40,7 @@ export default function Worldcup() {
       <AnimalCard animal={shuffleAnimal[1]} /> 이 코드로 했을 시는 useState 초기 값에 빈배열 추가 */}
       {shuffleAnimal &&
         (end === 1 ? (
-          <WinAnimalCard />
+          <WinAnimalCard animal={shuffleAnimal[choice]} />
         ) : (
           <>
             <AnimalCard
