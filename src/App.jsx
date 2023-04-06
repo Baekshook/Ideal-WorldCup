@@ -1,5 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Main from "./pages/main";
+import Worldcup from "./pages/worldcup";
+
 function App() {
-  return <div className="bg-red-100">Hello, React</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/worldcup" element={<Worldcup />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
