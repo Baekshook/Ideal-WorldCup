@@ -22,7 +22,8 @@ export default function Worldcup() {
   }, []);
   // sort 함수 - map 함수와 비슷 (sort는 배열 정렬할때 많이 사용)
 
-  useEffect(() => console.log(nextRound), [nextRound]);
+  //   useEffect(() => console.log(nextRound), [nextRound]);
+
   useEffect(() => {
     if (choice === end) {
       setShuffleAnimal(nextRound); // 1. nextRound에 담긴 동물들을 shuffleAnimal로 옮긴다.
@@ -48,7 +49,10 @@ export default function Worldcup() {
               choice={choice}
               onClickChoice={onClickChoice}
             />
-            <div className="text-2xl mx-8 font-bold">VS</div>
+            <div className="text-2xl mx-8 font-bold">
+              <div>{`${end === 2 ? "결승" : end + "강"}`}</div>
+              <div>VS</div>
+            </div>
             <AnimalCard
               animal={shuffleAnimal[choice + 1]}
               choice={choice + 1}

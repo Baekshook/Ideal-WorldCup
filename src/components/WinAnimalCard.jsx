@@ -7,7 +7,7 @@ export default function WinAnimalCard({ animal }) {
         🎉🎉🎉 Conglaturations 🎉🎉🎉
       </div>
       <img
-        className="border-8 border-white shadow-lg shadow-white w-96"
+        className="border-8 border-yellow-300 shadow-lg shadow-white w-96"
         src={`${process.env.PUBLIC_URL}/images/${animal}.jpeg`}
         alt="animals"
       />
