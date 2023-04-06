@@ -6,6 +6,7 @@ export default function AnimalCard({ animal, choice, onClickChoice }) {
       <img
         className="border-yellow-300 border-8 shadow-lg shadow-white w-96"
         src={`${process.env.PUBLIC_URL}/images/${animal}.jpeg`}
+        alt="animals"
       />
       <div className="text-2xl mt-4 font-bold">{animal} 🌸🍀🩵</div>
       <button
